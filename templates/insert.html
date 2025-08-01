@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Court Data Fetcher</title>
+</head>
+<body>
+    <h1>Enter Case Details</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Case Type:</label><br>
+        <input type="text" name="case_type" required><br><br>
+
+        <label>Case Number:</label><br>
+        <input type="text" name="case_number" required><br><br>
+
+        <label>Filing Year:</label><br>
+        <input type="text" name="filing_year" required><br><br>
+
+        <input type="submit" value="Fetch Case Info">
+    </form>
+</body>
+</html>
