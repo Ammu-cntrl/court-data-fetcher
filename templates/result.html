@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Result</title>
+</head>
+<body>
+    <h1>Case Details</h1>
+
+    <ul>
+        {% for key, value in result.items() %}
+            <li><strong>{{ key }}:</strong> 
+                {% if 'http' in value %}
+                    <a href="{{ value }}" target="_blank">Download PDF</a>
+                {% else %}
+                    {{ value }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Search Another Case</a>
+</body>
+</html>
